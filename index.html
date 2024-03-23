@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- repo 5 -->
+
 
 <head>
     <meta charset="UTF-8">
@@ -54,10 +54,16 @@
         <section class="section section-one">
             <div class="container hero-section">
                 <h1>Effective Solutions for Your Business</h1>
-                <button type="button">Order Service</button>
+                <button class="button order-service-btn" data-modal-open>Order Service</button>
+            </div>
+
+            <div class="modal is-hidden" data-modal>
+                <div class="modal-content">
+                    <button class="close-btn" data-modal-close>&times;</button>
+                    continut modal
+                </div>
             </div>
         </section>
-
         <!-- sectiunea 1 -->
         <section class="section">
             <div class="container">
@@ -392,6 +398,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

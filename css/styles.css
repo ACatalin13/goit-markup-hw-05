@@ -78,7 +78,6 @@ a {
 
 .top-line-style {
   display: flex;
-  width: 90em;
   height: 4.5em;
   justify-content: space-between;
   align-items: baseline;
@@ -118,7 +117,7 @@ a {
 }
 
 .navbar-list-item:hover {
-  color: var(--green);
+  color: var(--ocean);
 }
 
 .contact-info {
@@ -137,7 +136,7 @@ a {
 }
 
 .contact-info a:hover {
-  color: var(--green);
+  color: var(--ocean);
 }
 
 .section-one {
@@ -186,8 +185,8 @@ a {
 }
 
 .hero-section button:hover {
-  color: var(--green);
-  background: var(--slate);
+  color: var(--white);
+  background: var(--ocean);
 }
 
 .section-one-list {
@@ -341,8 +340,8 @@ h3 {
 .social-icons-list .social-icon {
   width: 40px;
   height: 40px;
-  background-color: var(--cloud);
-  fill: var(--light-slate);
+  background-color: var(--iris);
+  fill: var(--cloud);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -353,7 +352,7 @@ h3 {
 .social-icons-list .social-icon:active {
   width: 40px;
   height: 40px;
-  background-color: var(--iris);
+  background-color: var(--ocean);
   fill: var(--cloud);
   border-radius: 50%;
   display: flex;
@@ -460,4 +459,42 @@ h3 {
 .footer-social-icons-list .social-icon:hover,
 .footer-social-icons-list .social-icon:active {
   background-color: var(--green);
+}
+/* tema 5 */
+.is-hidden {
+  visibility: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--dairy);
+  border-radius: 4px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  width: 408px;
+  height: 584px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  color: var(--navy-blue);
+  background-color: var(--corn-flower);
+  outline: none;
+  border-style: none;
 }
