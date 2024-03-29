@@ -45,6 +45,7 @@
   --grey: rgba(46, 47, 66, 0.7);
   --white: rgba(255, 255, 255, 1);
   --dairy: rgba(252, 252, 252, 1);
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -92,11 +93,18 @@ a {
   letter-spacing: 0.03em;
   padding-top: 1.5em;
   padding-left: 9.75em;
+  transition: transform var(--transition);
 }
 
 .logo::after {
   content: "STUDIO";
   color: var(--navy-blue);
+  transition: transform var(--transition);
+}
+
+.logo:hover,
+.logo:hover::after {
+  scale: 1.05;
 }
 
 .navbar-list {
@@ -114,11 +122,18 @@ a {
   font-weight: 500;
   line-height: 1.5em;
   letter-spacing: 0.02em;
+  transition: color var(--transition);
+  position: relative;
 }
 
-.navbar-list-item:hover {
+.navbar-list-item:hover,
+.navbar-list-item:active {
   color: var(--ocean);
 }
+
+/* .active-html-page::after {
+ ???????????
+} */
 
 .contact-info {
   display: flex;
@@ -133,6 +148,7 @@ a {
 
 .contact-info a {
   color: var(--slate);
+  transition: transform var(--transition);
 }
 
 .contact-info a:hover {
@@ -182,11 +198,15 @@ a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: transform var(--transition);
+  border-style: none;
 }
 
 .hero-section button:hover {
-  color: var(--white);
   background: var(--ocean);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .section-one-list {
@@ -309,11 +329,18 @@ h3 {
   line-height: 1.16667em;
   letter-spacing: 0.03em;
   color: var(--iris);
+  transition: transform var(--transition);
 }
 
 .footer-logo::after {
   content: "STUDIO";
   color: var(--cloud);
+  transition: transform var(--transition);
+}
+
+.footer-logo:hover,
+.footer-logo:hover::after {
+  transform: scale(1.05);
 }
 
 .footer-section-style p {
@@ -346,6 +373,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: color var(--transition);
 }
 
 .social-icons-list .social-icon:hover,
@@ -403,6 +431,7 @@ h3 {
   align-items: center;
   border: 1px solid var(--light-slate);
   border-radius: 4px;
+  transition: color var(--transition);
 }
 
 .customers-list .client-icon-container:hover,
@@ -413,6 +442,7 @@ h3 {
 .customers-list .client-icon-container svg {
   width: 104px;
   height: 56px;
+  transition: color var(--transition);
 }
 
 .customers-list .client-icon-container svg:hover,
@@ -454,6 +484,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: color var(--transition);
 }
 
 .footer-social-icons-list .social-icon:hover,
