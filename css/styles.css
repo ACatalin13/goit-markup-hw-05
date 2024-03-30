@@ -45,7 +45,7 @@
   --grey: rgba(46, 47, 66, 0.7);
   --white: rgba(255, 255, 255, 1);
   --dairy: rgba(252, 252, 252, 1);
-  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 1500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -104,7 +104,7 @@ a {
 
 .logo:hover,
 .logo:hover::after {
-  scale: 1.05;
+  transform: scale(1.05);
 }
 
 .navbar-list {
@@ -126,14 +126,20 @@ a {
   position: relative;
 }
 
-.navbar-list-item:hover,
-.navbar-list-item:active {
+.navbar-list-item:hover {
   color: var(--ocean);
 }
 
-/* .active-html-page::after {
- ???????????
-} */
+a.current-page::after {
+  content: "";
+  position: absolute;
+  bottom: -20px; /* Ajustează poziția sublinierii */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--ocean); /* Culoarea sublinierii */
+}
 
 .contact-info {
   display: flex;
@@ -148,7 +154,7 @@ a {
 
 .contact-info a {
   color: var(--slate);
-  transition: transform var(--transition);
+  transition: color var(--transition);
 }
 
 .contact-info a:hover {
@@ -198,7 +204,7 @@ a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: transform var(--transition);
+  transition: transform var(--transition), background-color var(--transition);
   border-style: none;
 }
 
@@ -373,7 +379,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: color var(--transition);
+  transition: background-color var(--transition);
 }
 
 .social-icons-list .social-icon:hover,
@@ -431,7 +437,7 @@ h3 {
   align-items: center;
   border: 1px solid var(--light-slate);
   border-radius: 4px;
-  transition: color var(--transition);
+  transition: border-color var(--transition);
 }
 
 .customers-list .client-icon-container:hover,
@@ -442,7 +448,7 @@ h3 {
 .customers-list .client-icon-container svg {
   width: 104px;
   height: 56px;
-  transition: color var(--transition);
+  transition: fill var(--transition);
 }
 
 .customers-list .client-icon-container svg:hover,
@@ -484,7 +490,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: color var(--transition);
+  transition: background-color var(--transition);
 }
 
 .footer-social-icons-list .social-icon:hover,
@@ -494,6 +500,7 @@ h3 {
 /* tema 5 */
 .is-hidden {
   visibility: hidden;
+  transform: scale(1.05);
 }
 
 .modal {
@@ -505,6 +512,8 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(47, 47, 66, 0.4);
+  transition: transform var(--transition);
 }
 
 .modal-content {
